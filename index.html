@@ -1,25 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./src/assets/img/logo-rick.png" >
+    <link rel="shortcut icon" href="./src/assets/img/logo-rick.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Rick & Morty</title>
 </head>
+
 <body>
-    <header class="flex justify-center w-full items-center ">
-        <nav class="flex justify-between items-center w-[90%]">
-            <figure class="w-32">
-                <img src="./src/assets/img/Rick-and-Morty.png" alt="">
+    <header class="flex flex-col justify-center w-full items-center shadow-lg shadow-emerald-800" id="header">
+        <nav class="flex justify-between items-center w-[100%] h-[80px] shadow-xl z-20 shadow-black/75 bg-black"
+            id="nav">
+            <figure class="w-36">
+                <img src="./src/assets/img/Rick-and-Morty.png" alt="Rick-and-Morty">
             </figure>
-            <ul>
-                <li>hola</li>
-                <li>hola</li>
-                <li>chao</li>
-                <li>hola</li>
+            <ul class="md:flex justify-around gap-4 w-[40%] font-normal text-black hidden">
+                <li class="hover:text-[#14A44D] hover:font-semibold"><a href="">HOME</a></li>
+                <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./src/search/">SEARCH</a></li>
+                <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./src/comments">COMENTS</a></li>
+                <li class="hover:text-[#14A44D] hover:font-semibold"><a href="">COMMING SOON</a></li>
             </ul>
         </nav>
-    </header>
+        <section class="w-full flex flex-row bg-cover bg-no-repeat bg-center saturate-50 overflow-hidden"
+            id="section-info">
+            <div class="flex flex-col justify-center max-w-[800px] min-w-[300px] z-20 pt-4 pl-8 pb-16 pr-2 w-full sm:w-[40%] bg-black/60 backdrop-blur-sm"
+                id="container-info">
+                <figure class="w-[90%]" id="container-info-img">
+                    <img src="./src/assets/img/Rick-and-Morty.png" alt="Rick-and-Morty">
+                </figure>
+                <div class="mt-4" id="conatiner-details-info">
+                    <div class="mb-[22px]" id="title">
+                        <h1 class="font-semibold text-2xl">Rick and Morty</h1>
+                    </div>
+                    <div class="" id="subconatiner-details-info">
+                        <p class="text-white text-lg max-w-[80%] mb-5">
+                            Rick, an alcoholic scientist, kidnaps his impressionable grandson, Morty, to live dangerous
+                            adventures through our cosmos and parallel universes.
+                        </p>
+                        <p><span class="text-neutral-400 text-base font-normal mr-[5px]">Created by:</span>Dan
+                            Harmon,Justin Roiland.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main class="flex flex-col justify-center items-center my-10 w-full" id="main">
+        <section class="my-5 w-[86%]">
+            <h2 class="text-xl font-semibold mb-10">
+                Episodies
+            </h2>
+            <article class="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-16">
+                <!-- seccion de temporadas -->
+                <div class="relative flex w-76 flex-col rounded-xl bg-clip-border text-gray-700 shadow-lg shadow-black/60">
+                    <div
+                        class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    </div>
+                    <div class="p-6">
+                        <h5
+                            class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                            Tailwind card
+                        </h5>
+                        <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative flex w-76 flex-col rounded-xl bg-clip-border text-gray-700 shadow-lg shadow-black/60">
+                    <div
+                        class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    </div>
+                    <div class="p-6">
+                        <h5
+                            class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                            Tailwind card
+                        </h5>
+                        <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative flex w-76 flex-col rounded-xl bg-clip-border text-gray-700 shadow-lg shadow-black/60">
+                    <div
+                        class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    </div>
+                    <div class="p-6">
+                        <h5
+                            class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                            Tailwind card
+                        </h5>
+                        <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative flex w-76 flex-col rounded-xl bg-clip-border text-gray-700 shadow-lg shadow-black/60">
+                    <div
+                        class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
+                    </div>
+                    <div class="p-6">
+                        <h5
+                            class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                            Tailwind card
+                        </h5>
+                        <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="my-5">
+            <h2 class="text-xl font-semibold mb-5">
+                The main characters
+            </h2>
+            <article class="grid xl:grid-cols-4 sm:grid-cols-2 gap-4">
+                <!-- seccion de personajes principales -->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="content">
+                            <p class="heading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="content">
+                            <p class="heading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="content">
+                            <p class="heading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="content">
+                            <p class="heading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="my-5 w-full h-[128px] flex justify-around items-center ">
+            <h3 class="text-xl font-semibold mb-5">
+                Post a comment!!
+            </h3>
+            <form class="flex flex-row flex-row-wrap justify-center items-center ">
+                <div class="inputbox">
+                    <input type="text" required="required">
+                    <span>User</span>
+                    <i></i>
+                </div>
+                <textarea name="" id="" ></textarea>
+                <button type="submit">POST</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="./src/js/index.js"></script>
 </body>
+
 </html>
