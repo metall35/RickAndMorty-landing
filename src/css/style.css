@@ -19,10 +19,13 @@ body {
     box-shadow: 0px 0px 100px 220px rgba(0, 0, 0, 0.681);
 }
 
+#section-form {
+    background-image: url('https://www.denofgeek.com/wp-content/uploads/2022/09/rick-and-morty-season-6-episode-1.jpg?fit=1920%2C1080');
+}
 
 .inputbox {
     position: relative;
-    width: 196px;
+    width: 100%;
 }
 
 .inputbox input {
@@ -33,7 +36,7 @@ body {
     outline: none;
     box-shadow: none;
     border: none;
-    color: #23242a;
+    color: #ffffff;
     font-size: 1em;
     letter-spacing: 0.05em;
     transition: 0.5s;
@@ -45,7 +48,7 @@ body {
     left: 0;
     padding: 20px 10px 10px;
     font-size: 1em;
-    color: #8f8f8f;
+    color: #ffffff;
     letter-spacing: 00.05em;
     transition: 0.5s;
     pointer-events: none;
@@ -55,7 +58,6 @@ body {
 .inputbox input:focus~span {
     color: #14A44D;
     transform: translateX(-10px) translateY(-34px);
-    font-size: 0, 75em;
 }
 
 .inputbox i {
@@ -64,8 +66,8 @@ body {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #14A44D;
-    border-radius: 4px;
+    background: #14a44e96;
+    border-radius: 8px;
     transition: 0.5s;
     pointer-events: none;
     z-index: 9;
@@ -97,19 +99,8 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
-}
-
-.card .front-content p {
-    font-size: 32px;
-    font-weight: 700;
-    opacity: 1;
-    background: linear-gradient(-45deg, #14A44D 0%, #0ebca5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
 }
 
@@ -121,18 +112,16 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    text-align: center;
     gap: 10px;
-    background: linear-gradient(-45deg, #14A44D 0%, #0ebca5 100%);
-    color: #e8e8e8;
+    background: #00000091;
+    backdrop-filter: blur(4px);
     padding: 20px;
     line-height: 1.5;
     border-radius: 5px;
-    pointer-events: none;
     transform: translatex(96%);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.8s cubic-bezier(0.43, 1, 0.320, 1);
 }
 
 .card .content .heading {
@@ -141,11 +130,29 @@ body {
 }
 
 .card:hover .content {
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
-.card:hover .front-content {
-    transform: translateX(20%);
+@keyframes animated {
+    0% {
+        transform: translateX(96%);
+    }
+
+    25% {
+        transform: translateX(75%);
+    }
+
+    50% {
+        transform: translateX(50%);
+    }
+
+    75% {
+        transform: translateX(25%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .card:hover .front-content p {
