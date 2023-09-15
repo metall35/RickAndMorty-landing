@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Rick & Morty</title>
 </head>
+
 <body>
     <header class="flex justify-center w-full items-center shadow-lg " id="header">
         <nav class="flex justify-between items-center w-[100%] h-[80px] shadow-xl z-20 shadow-black/75 bg-black">
@@ -22,10 +24,28 @@
             </ul>
         </nav>
     </header>
-    <main id="main">
-        
+    <main class="mt-20" id="main">
+        <section class="flex justify-center items-center flex-col">
+            <h1 class="text-xl font-semibold mb-2">search to characters</h1>
+            <div class="inputBox_container mb-8">
+                <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
+                    <path
+                        d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
+                    </path>
+                </svg>
+                <input class="inputBox" id="searchCharacter" type="text" placeholder="Search For characters">
+                <button class="m-1" id="searchButton">Search</button>
+            </div>
+            <section class="my-5 w-[86%] ">
+                <article class="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-16" id="container-characters-search">
+                        <!-- section search characters¡ -->
+                </article>
+                
+            </section>
+        </section>
     </main>
-    
-    <script src="../js/index.js"></script>
+
+    <script src="../js/search.js"></script>
 </body>
+
 </html>
