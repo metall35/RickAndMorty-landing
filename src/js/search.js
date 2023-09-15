@@ -67,7 +67,7 @@ searchButton.addEventListener('click', async () => {
         const filterCharacter = await searchResults(characterText);
         displayResults(filterCharacter);
     } else {
-        containerCharactersSearch.innerHTML = '<p>Please enter a character name</p>';
+        containerCharactersSearch.innerHTML = '<p>Please enter a character propieties</p>';
     }
 })
-containerCharactersSearch.innerHTML = '<p>Please enter a character name</p>'
+containerCharactersSearch.innerHTML = '<p>Please enter a character propieties</p>'
