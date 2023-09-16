@@ -11,24 +11,50 @@
 </head>
 
 <body>
-    <header class="flex justify-center w-full items-center shadow-lg " id="header">
+    <header class="flex justify-center w-full items-center shadow-lg relavite" id="header">
         <nav class="flex justify-between items-center w-[100%] h-[80px] shadow-xl z-20 shadow-black/75 bg-black">
             <figure class="w-36">
                 <img src="../assets/img/Rick-and-Morty.png" alt="">
             </figure>
-            <ul class="flex justify-around gap-4 w-[40%] font-normal text-black">
+            <ul class="md:flex justify-around gap-4 w-[40%] font-normal text-black hidden">
                 <li class="hover:text-[#14A44D] hover:font-semibold"><a href="../../index.html">HOME</a></li>
                 <li class="hover:text-[#14A44D] hover:font-semibold"><a href="../search/">SEARCH</a></li>
                 <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./comments">COMENTS</a></li>
                 <li class="hover:text-[#14A44D] hover:font-semibold"><a href="">COMMING SOON</a></li>
             </ul>
+            <button type="button" id="nav-button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div id="nav-movil" class="hidden bg-black absolute right-0 top-20 z-[2000] rounded-lg ">
+                <ul class="flex justify-around flex-col gap-4 w-[40%] font-normal text-black p-2">
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="../../index.html">HOME</a></li>
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="../search/">SEARCH</a></li>
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./comments">COMENTS</a></li>
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="">COMMING SOON</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main id="main">
+    <main class="mt-20" id="main">
+        <section class="flex justify-center items-center flex-col">
+            <h1 class="text-xl font-semibold mb-2">Resient Post</h1>
+            <section class="my-5 w-[90%] flex justify-center items-center">
+                <article class="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-x-8 gap-y-16" id="container-post">
+                    <!-- post -->
+                </article>
 
+            </section>
+        </section>
     </main>
 
-    <script src="../js/index.js"></script>
+    <script src="../js/showPost.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

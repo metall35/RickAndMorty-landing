@@ -23,6 +23,7 @@ body {
     background-image: url('https://www.denofgeek.com/wp-content/uploads/2022/09/rick-and-morty-season-6-episode-1.jpg?fit=1920%2C1080');
 }
 
+/* input commet user */
 .inputbox {
     position: relative;
     width: 100%;
@@ -134,6 +135,7 @@ body {
     transform: translateY(0);
 }
 
+/* input post comment */
 .inputBox_container {
     display: flex;
     align-items: center;
@@ -164,4 +166,78 @@ body {
 
 ::placeholder {
     color: #abb2bf;
+}
+
+/* card coments */
+
+.card-comments {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    border-radius: 14px;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 16px #000, -4px -4px 16px #14A44D;
+    ;
+}
+
+.bg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px;
+    top: 5px;
+    left: 5px;
+    width: 240px;
+    height: 140px;
+    z-index: 2;
+    background: #000000;
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #14A44D;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+    0% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+
+    50% {
+        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+
+    75% {
+        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+
+p {
+    color: white;
 }

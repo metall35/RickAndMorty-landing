@@ -12,17 +12,33 @@
 
 <body>
     <header class="flex flex-col justify-center w-full items-center shadow-lg shadow-emerald-800" id="header">
-        <nav class="flex justify-between items-center w-[100%] h-[80px] shadow-xl z-20 shadow-black/75 bg-black"
-            id="nav">
+        <nav class="flex justify-between items-center w-[100%] h-[80px] shadow-xl z-20 shadow-black/75 bg-black">
             <figure class="w-36">
-                <img src="./src/assets/img/Rick-and-Morty.png" alt="Rick-and-Morty">
+                <img src="../assets/img/Rick-and-Morty.png" alt="">
             </figure>
             <ul class="md:flex justify-around gap-4 w-[40%] font-normal text-black hidden">
-                <li class="hover:text-[#14A44D] hover:font-semibold"><a href="">HOME</a></li>
+                <li class="hover:text-[#14A44D] hover:font-semibold"><a href="../../index.html">HOME</a></li>
                 <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./src/search/">SEARCH</a></li>
                 <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./src/comments">COMENTS</a></li>
                 <li class="hover:text-[#14A44D] hover:font-semibold"><a href="">COMMING SOON</a></li>
             </ul>
+            <button type="button" id="nav-button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div id="nav-movil" class="hidden bg-black absolute right-0 top-20 z-[2000] rounded-lg ">
+                <ul class="flex justify-around flex-col gap-4 w-[40%] font-normal text-black p-2">
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./">HOME</a></li>
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./src/search/">SEARCH</a></li>
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="./src/comments/">COMENTS</a></li>
+                    <li class="hover:text-[#14A44D] hover:font-semibold"><a href="">COMMING SOON</a></li>
+                </ul>
+            </div>
         </nav>
         <section class="w-full flex flex-row bg-cover bg-no-repeat bg-center saturate-50 overflow-hidden"
             id="section-info">
@@ -70,20 +86,25 @@
             <h3 class="text-xl font-semibold mb-5">
                 Post a comment!!
             </h3>
-            <form class="flex flex-col gap-4 flex-row-wrap justify-center items-center w-full md:w-[480px] px-8">
+            <form class="flex flex-col gap-4 flex-row-wrap justify-center items-center w-full md:w-[480px] px-8" id="form">
                 <div class="inputbox">
                     <input type="text" required="required" id="input-text">
                     <span class="font-semibold">User</span>
                     <i></i>
                 </div>
-                <textarea id="textarea-comment" class="bg-white/20 w-full h-20 rounded-xl hover:border-[#14A44D] p-2 text-sm" id="input-textarea"></textarea>
+                <p class="block font-sans text-base leading-relaxed text-inherit antialiased text-red-600" id="error-form"></p>
+                <textarea class="bg-white/20 w-full h-20 rounded-xl hover:border-[#14A44D] p-2 text-sm" id="input-textarea" required="required"></textarea>
                 <button type="submit" class="bg-[#14A44D] py-2 px-4 w-full rounded-xl hover:bg-emerald-600 text-xl" id="input-submit">POST</button>
+                <p class="block font-sans text-base leading-relaxed text-inherit antialiased text-lime-600" id="save-form"></p>
             </form>
         </section>
     </main>
 
     <script src="./src/js/locations.js"></script>
     <script src="./src/js/characters.js"></script>
+    <script src="./src/js/validForm.js"></script>
+    <script src="./src/js/navbar.js"></script>
+
 </body>
 
 </html>
